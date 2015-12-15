@@ -1,0 +1,93 @@
+// Base Class Definition
+// -------------------------
+
+.col {
+  width: 49%;
+  float: left;
+  & + .col {
+    float: right;
+  }
+}
+
+.tag-selector {
+  font-size: .85em;
+  position: relative;
+  cursor: text;
+  .tag-item {
+    .set-display-ib();
+    background: @color-gray-medium;
+    color: @color-gray;
+    line-height: 1.1;
+    .set-padding-margin(2px 2px 2px 0, .3em .5em);
+    .close {
+      font-style: normal;
+      color: @color-white;
+      background: @color-gray-normal;
+      font-size: .8em;
+      width: 14px;
+      height: 12px;
+      text-align: center;
+      .set-padding-margin(0 0 0 5px,0);
+      .set-display-ib();
+      .set-border-radius(50px);
+    }
+  }
+  .tag-input-box {
+    border: 1px solid @color-gray-medium;
+    white-space: nowrap;
+    overflow: hidden;
+    color: @color-gray-normal;
+    .set-padding(3px 5px);
+    z-index: 15;
+    input {
+      border: none;
+      background-color: transparent;
+      border: none;
+      color: @color-gray;
+      max-width: 100%;
+      width: auto;
+      .set-padding(5.5px 0);
+      .set-display-ib();
+      &:focus{
+        outline:none;
+      }
+    }
+  }
+  .tag-options {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    display: none;
+    border: 1px solid @color-gray-medium;
+    background: @color-gray-very-light;
+    max-height: 400px;
+    overflow: auto;
+    .set-padding(3px);
+    .set-box-shadow();
+    .box {
+      width: 33.33%;
+      cursor: pointer;
+      float: left;
+      .set-padding(3px);
+      & > div {
+        border: 1px solid @color-gray-light;
+        background: @color-gray-very-light;
+        overflow: hidden;
+        .set-padding(5px);
+
+        &:hover {
+          outline: 1px solid @color-blue;
+        }
+      }
+      &:focus > div {
+        outline: 1px solid @color-black;
+      }
+      .tag-more,
+      .short-description,
+      .description {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

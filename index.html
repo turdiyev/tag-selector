@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query.uz ga xush kelibsiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet/less" type="text/css" href="less/tag-selector/main.less"/>-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tag-selector.css"/>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/less.min.js"></script>-->
+    <script src="js/tag-selector.js"></script>
+    <script>
+        $(document).ready(function () {
+            var TagSelector = $("#tagsIt").tagSelector({
+                complete: function (searchWord) {
+                    console.log("API ga junatish uchun kalit so`z ==> ", searchWord);
+
+                    var jsonArray = [
+                        {
+                            name: "Java" + parseInt(Math.random() * 100),
+                            stat: parseInt(Math.random() * 100),
+                            shortDesc: "Ok now i know that im not supposed to ask this kind of question but i'm at" +
+                                    "the end of my game...Ok now i know that im not supposed to ask this kind of question " +
+                                    "but i'm at the end of my game... " +
+                                    "I just cannot find the name of this game.",
+                            moreLink: "www.so.com"
+                        },
+                        {
+                            name: "Java" + parseInt(Math.random() * 100),
+                            stat: parseInt(Math.random() * 100),
+                            shortDesc: "Ok now i know that im not supposed to ask this kind of question but i'm at" +
+                                    "the end of my game...Ok now i know that im not supposed to ask this kind of question " +
+                                    "but i'm at the end of my game... " +
+                                    "I just cannot find the name of this game.",
+                            moreLink: "www.so.com"
+                        }
+                    ];
+
+                    //API dan kelgan datani(array bulishi kerak, va yuqoridagi formatga utkazish kerak)
+                    TagSelector.setOptionContent(jsonArray);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="col">
+    <div id="tagsIt" class="additional"></div>
+</div>
+<div class="col">
+    <div class="tag-selector">
+        <div class="tag-input-box">
+            <span class="tag-item">Java <i class="close"></i></span>
+            <!--<span class="tag-item">SpringMVC <i class="close"></i></span>-->
+            <!--<span class="tag-item">Javascript <i class="close"></i></span>-->
+            <!--<span class="tag-item">Elastic Search <i class="close"></i></span>-->
+            <!--<span class="tag-item">Sorting logic <i class="close"></i></span>-->
+            <span class="tag-item">Design mattern <i class="close"></i></span>
+            <span class="tag-item">Design <i class="close"></i></span>
+            <input class="" type="text" tabindex="100" placeholder=""/>
+        </div>
+        <div class="tag-options">
+            <div class="box" tabindex="100">
+                <div>
+                    <span class="tag-item"><span class="match">Java</span>-JVM</span>
+                    <span class="tag-stat"> x 13</span>
+
+                    <p class="description">Ok now i know that im not supposed to ask this kind of question but i'm at
+                        the
+                        end of
+                        my game...Ok now i know that im not supposed to ask this kind of question but i'm at the
+                        end of
+                        my game... I just cannot find the name of this game.</p>
+
+                    <a class="tag-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="box" tabindex="100">
+                <div>
+                    <span class="tag-item"><span class="match">Java</span>-JVM</span>
+                    <span class="tag-stat"> x 13</span>
+
+                    <p class="description">I just cannot find the name of this game.</p>
+
+                    <a class="tag-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="box" tabindex="100">
+                <div>
+                    <span class="tag-item"><span class="match">Java</span>-JVM</span>
+                    <span class="tag-stat"> x 13</span>
+
+                    <p class="description">Ok now i know that im not supposed to ask this kind of question but i'm at
+                        the
+                        end of
+                        my game... I just cannot find the name of this game.</p>
+
+                    <a class="tag-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="box" tabindex="100">
+                <div>
+                    <span class="tag-item"><span class="match">Java</span>-JVM</span>
+                    <span class="tag-stat"> x 13</span>
+                    g
+                    <p class="description">Ok now i know that im not supposed to ask this kind of question but i'm at
+                        the
+                        end of
+                        my game... I just cannot find the name of this ame.</p>
+
+                    <a class="tag-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="box" tabindex="100">
+                <div>
+                    <span class="tag-item"><span class="match">Java</span>-JVM</span>
+                    <span class="tag-stat"> x 13</span>
+
+                    <p class="description">I just cannot find the name of this game.</p>
+
+                    <a class="tag-more">Batafsil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

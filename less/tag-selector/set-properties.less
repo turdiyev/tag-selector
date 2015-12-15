@@ -1,0 +1,38 @@
+.set-padding-margin(@margin: 0, @padding:0) {
+  .set-margin(@margin);
+  .set-padding(@padding);
+}
+
+.set-padding(@value:0) {
+  padding: @value;
+}
+
+.set-margin(@value:0) {
+  margin: @value;
+}
+.set-max-width(@value:100%) {
+  max-width: @value;
+}
+
+.set-border-radius(@value: 3px) {
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  border-radius: @value;
+}
+
+.set-box-shadow(@value: 0 1px 2px @color-gray-medium) {
+  -webkit-box-shadow: @value;
+  -moz-box-shadow: @value;
+  box-shadow: @value;
+}
+.set-display-ib{
+  display: inline-block;
+  vertical-align: middle;
+}
+.set-transition(@value: all 0.3s ease){
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -ms-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}

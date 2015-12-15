@@ -1,0 +1,11 @@
+.set-display-ib {
+    display: inline-block;
+    vertical-align: middle;
+}
+.col {
+    width: 49%;
+    float: left;
+}
+.col + .col {
+    float: right;
+}

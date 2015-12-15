@@ -1,0 +1,93 @@
+/*!
+ *  Main style by @sherali - http://query.uz - @main
+ *  License - http://query.uz
+ */
+
+.tag-selector {
+  font-size: .85em;
+  position: relative;
+  cursor: text;
+}
+.tag-selector .tag-item {
+  display: inline-block;
+  vertical-align: middle;
+  background: #cccccc;
+  color: #333333;
+  line-height: 1.1;
+  margin: 2px 2px 2px 0;
+  padding: 0.3em 0.5em;
+}
+.tag-selector .tag-item .close {
+  font-style: normal;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: .8em;
+  width: 14px;
+  height: 12px;
+  text-align: center;
+  margin: 0 0 0 5px;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.tag-selector .tag-input-box {
+  border: 1px solid #cccccc;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 3px 5px;
+}
+.tag-selector .tag-input-box input {
+  background-color: transparent;
+  border: none;
+  color: #333333;
+  max-width: 100%;
+  width: auto;
+  padding: 5.5px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tag-selector .tag-input-box input:focus {
+  outline: none;
+}
+.tag-selector .tag-options {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  display: none;
+  border: 1px solid #cccccc;
+  background: rgba(0, 0, 0, 0.005);
+  max-height: 400px;
+  overflow: auto;
+  padding: 3px;
+  -webkit-box-shadow: 0 1px 2px #cccccc;
+  -moz-box-shadow: 0 1px 2px #cccccc;
+  box-shadow: 0 1px 2px #cccccc;
+}
+.tag-selector .tag-options .box {
+  width: 33.33%;
+  cursor: pointer;
+  float: left;
+  padding: 3px;
+}
+.tag-selector .tag-options .box > div {
+  border: 1px solid #eeeeee;
+  background: rgba(0, 0, 0, 0.005);
+  overflow: hidden;
+  padding: 5px;
+}
+.tag-selector .tag-options .box > div:hover {
+  outline: 1px solid #2196f3;
+}
+.tag-selector .tag-options .box:focus > div {
+  outline: 1px solid #000000;
+}
+.tag-selector .tag-options .box .tag-more,
+.tag-selector .tag-options .box .short-description,
+.tag-selector .tag-options .box .description {
+  font-size: 0.8em;
+}
