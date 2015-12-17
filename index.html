@@ -13,11 +13,13 @@
     <script>
         $(document).ready(function () {
             var TagSelector = $("#tagsIt").tagSelector({
-                complete: function (searchWord) {
+                search: function (searchWord) {
                     console.log("API ga junatish uchun kalit so`z ==> ", searchWord);
 
                     var jsonArray = [
                         {
+                            id: parseInt(Math.random() * 100),
+
                             name: "Java" + parseInt(Math.random() * 100),
                             stat: parseInt(Math.random() * 100),
                             shortDesc: "Ok now i know that im not supposed to ask this kind of question but i'm at" +
@@ -27,6 +29,7 @@
                             moreLink: "www.so.com"
                         },
                         {
+                            id: parseInt(Math.random() * 100),
                             name: "Java" + parseInt(Math.random() * 100),
                             stat: parseInt(Math.random() * 100),
                             shortDesc: "Ok now i know that im not supposed to ask this kind of question but i'm at" +
@@ -46,9 +49,13 @@
 </head>
 <body>
 <div class="col">
+    <h1>AutoComplete example</h1>
+
     <div id="tagsIt" class="additional"></div>
 </div>
 <div class="col">
+    <h1>HTML structure</h1>
+
     <div class="tag-selector">
         <div class="tag-input-box">
             <span class="tag-item">Java <i class="close"></i></span>
